@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="myLoginAction" class="com.action.LoginAction" scope="prototype">
+		<property name="is" ref="myIndexService" />
+	</bean>
+	
+	<bean id="myIndexService" class="com.service.IndexServiceImpl" scope="prototype">
+		<property name="id" ref="myIndexDao"></property>
+	</bean>
+	
+	<bean id="myIndexDao" class="com.dao.IndexDaoImpl" scope="prototype">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean" scope="prototype">
+		<property name="configLocation" value="classpath:hibernate.cfg.xml"></property>
+	</bean>
+</beans>
