@@ -12,7 +12,7 @@
 + mysql
 ---
 ## 2.准备工作
-&emsp;&emsp;先创建一个Web Project。将相关的jar包导入到工程的\WebContent\WEB-INF\lib下。
+&emsp;&emsp;先创建一个Web Project。将相关的jar包导入到工程的/WebContent/WEB-INF/lib下。
 ### 2.1 spring
 &emsp;&emsp;下载地址：https://repo.spring.io/libs-release-local/org/springframework/  
 ![spring相关包](/images/spring-3.2.8.png)
@@ -24,7 +24,7 @@
 ![struts相关包](/images/struts-2.5.png)  
 *除了以上的jar包之外，还需要数据库连接池的jar包，具体可以在完整框架里面查看*
 ### 2.4 创建数据库
-&emsp;&emsp;创建好数据库里的表。
+&emsp;&emsp;创建好数据库里的表。表不需要太难，我只创建了三列。
 
 ---
 ## 3.配置Struts2
@@ -241,7 +241,7 @@ public String execute() throws Exception{
 ---
 ## 7 注意事项
 *根据我和我的同学在搭建过程当中出现的一些问题，提示需要注意的几个方面，
-报错但不知错在哪里可以查看以下以下几点：*  
+报错但不知错在哪里可以查看以下几点：*  
 
 + 注意jar包之间的冲突。名字一样，版本不同，删除其中一个。
 + applicationContext.xml配置文件中的 *id,class,name,ref* 都要一一对应。需要细心检查。
